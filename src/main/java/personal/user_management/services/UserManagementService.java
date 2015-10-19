@@ -47,9 +47,7 @@ public class UserManagementService {
 	}
 	
 	private void validateUserForUpdate(User user) {
-		if(StringUtils.isBlank(user.getId()))
-			//TODO: Log exception here
-			throw new UserManagementException("id cannot be blank for this operation");
+		checkIdExists(user.getId());
 		validateUser(user);
 	}
 	
@@ -101,5 +99,20 @@ public class UserManagementService {
 				return user;
 		}
 		return null;
+	}
+
+	public Object deleteUser(User user) {
+		User foundUser = getUserById(user.getId());
+		checkIdExists(user.getId());
+		if(foundUser == null)
+			throw new UserManagementException("User not found");
+		users.remove(foundUser);
+		return foundUser;
+	}
+
+	private void checkIdExists(String id) {
+		if(StringUtils.isBlank(id))
+			//TODO: Log exception here
+			throw new UserManagementException("id cannot be empty for this operation");
 	}
 }

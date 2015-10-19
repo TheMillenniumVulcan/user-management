@@ -8,6 +8,7 @@ import static spark.Spark.exception;
 import static spark.Spark.get;
 import static spark.Spark.post;
 import static spark.Spark.put;
+import static spark.Spark.delete;
 
 import com.google.gson.JsonSyntaxException;
 
@@ -24,6 +25,9 @@ public class UserManagementController {
 		}, json());
 		put("/updateUser", (req, res) -> {
 			return userManagementService.updateUser(parseUser(req.body()));
+		}, json());
+		delete("/deleteUser", (req, res) -> {
+			return userManagementService.deleteUser(parseUser(req.body()));
 		}, json());
 		
 		//Filters
