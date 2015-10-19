@@ -10,3 +10,4 @@ To run the service :<br>
 GET - "/users" - Gets all users<br>
 POST - "/createUser" - Creates a new user from the passed in json<br>
 PUT - "/updateUser" - Updates existing user with the passed in json<br>
+DELETE - "/deleteUser" - Deletes the user matching the passed in id<br>
