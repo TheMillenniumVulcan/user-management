@@ -5,4 +5,4 @@ To run the service :<br>
 4. Import project into Eclipse as a maven project<br>
 5. Open UserManagement.java and run as "Java Application"<br>
    This will start Sparks' internal Jetty server which runs on localhost:4567<br>
-6. Open Chrome and use AnvancedRESTClient or any other tool you of your preference to exercise themethods on the service<br>
+6. Open Chrome and use AdvancedRESTClient or any other tool of your preference to exercise themethods on the service<br>
