@@ -6,3 +6,7 @@ To run the service :<br>
 5. Open UserManagement.java and run as "Java Application"<br>
    This will start Sparks' internal Jetty server which runs on localhost:4567<br>
 6. Open Chrome and use AdvancedRESTClient or any other tool of your preference to exercise themethods on the service<br>
+<br>
+GET - "/users" - Gets all users<br>
+POST - "/createUser" - Creates a new user from the passed in json<br>
+PUT - "/updateUser" - Updates existing user with the passed in json<br>
