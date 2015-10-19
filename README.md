@@ -1,4 +1,4 @@
-To run the service :
+To run the service :<br>
 1. Make sure you have Java 1.8
 2. Make sure you have maven configured properly
 3. Run "mvn clean install"
